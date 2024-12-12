@@ -1,4 +1,7 @@
-title: Calculus 1
-author: Frederic Baumeister
+# Book settings
+title                       : Mathematik   # The title of the book. Will be placed in the left navbar.
+author                      : Frederic Baumeister  # The author of the book
+copyright                   : "2023"  # Copyright year to be placed in the footer
+logo                        : _static/my_logo.png
 execute:
   execute_notebooks: "auto"
