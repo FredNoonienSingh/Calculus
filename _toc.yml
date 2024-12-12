@@ -2,10 +2,15 @@ format: jb-book
 root: Einführung
 
 parts:
+  - caption: Grundlagen und Begriffe
+    chapters:
+      - file: zahlenbereiche
+      - file: brüche
   - caption: Calculus 101
     chapters:
       - file: Ableitungen
       - file: Tangente
+      - file: normale
       - file: monotonie
       - file: ExtremUndWendepunkte
   - caption: Jupyter, Markdown, Python & LaTeX
