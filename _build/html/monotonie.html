@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Monotonie und Krümmung &#8212; My Jupyter Book</title>
+    <title>Monotonie und Krümmung &#8212; Mathematik</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -66,7 +66,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Extrem und Wendepunkte" href="ExtremUndWendepunkte.html" />
-    <link rel="prev" title="Ableitungen" href="Ableitungen.html" />
+    <link rel="prev" title="Tangente und allgemeine Tangentengleichung" href="Tangente.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -143,8 +143,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Mathematik - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Mathematik - Home"/>
   
-    <p class="title logo__title">My Jupyter Book</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -167,12 +173,13 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Calculus 101</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Ableitungen.html">Ableitungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tangente.html">Tangente und allgemeine Tangentengleichung</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Monotonie und Krümmung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ExtremUndWendepunkte.html">Extrem und Wendepunkte</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Jupyter, Markdown, Python &amp; LaTeX</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="jupyter.html">WTF is JUPYTER ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Was sind Jupyter Notebooks?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown_guide.html">Markdown Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="latex_guide.html">Latex Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_for_math.html">Basic Python für Mathematik</a></li>
@@ -403,16 +410,16 @@ Wenn für alle <span class="math notranslate nohighlight">\(x\)</span> aus <span
     <span class="k">return</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="n">cartesean_plot</span><span class="p">(</span><span class="n">funcs</span><span class="o">=</span><span class="p">[</span>
-    <span class="p">{</span><span class="s1">&#39;func&#39;</span><span class="p">:</span><span class="n">get_function_value</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;$f(x) = x^2$&quot;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;func&#39;</span><span class="p">:</span><span class="n">get_derivative</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;$f&#39;&#39;(x) = 2x$&quot;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;func&#39;</span><span class="p">:</span><span class="n">get_second_derivative</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;$f&#39;&#39;(x) = 2$&quot;</span><span class="p">}</span>
+    <span class="p">{</span><span class="s1">&#39;func&#39;</span><span class="p">:</span><span class="n">get_function_value</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;$f(x)$&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;func&#39;</span><span class="p">:</span><span class="n">get_derivative</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;$f&#39;(x)$&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;func&#39;</span><span class="p">:</span><span class="n">get_second_derivative</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;$f&#39;&#39;(x)$&quot;</span><span class="p">}</span>
     <span class="p">],</span>
     <span class="n">lim</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/5fd7ba068157a529d8cc38196b29c69b5fc3599e8b864b4d0f0574a454c0400a.png" src="_images/5fd7ba068157a529d8cc38196b29c69b5fc3599e8b864b4d0f0574a454c0400a.png" />
+<img alt="_images/eeda82c1c44cf7f314d462de42bb2422fdbbb61dd22a45f59189e29f1851fb43.png" src="_images/eeda82c1c44cf7f314d462de42bb2422fdbbb61dd22a45f59189e29f1851fb43.png" />
 </div>
 </div>
 <p>Für <span class="math notranslate nohighlight">\(x \in (0;10]\)</span> ist der Graph <span class="math notranslate nohighlight">\(f(x)\)</span> streng monoton wachsend weil alle <span class="math notranslate nohighlight">\(f'(x)\textrm{-Werte}\)</span> oberhalb der <span class="math notranslate nohighlight">\(y\)</span>-Achse sind und damit <span class="math notranslate nohighlight">\(f'(x) &gt; 0\)</span> gilt.</p>
@@ -454,12 +461,12 @@ Wenn für alle <span class="math notranslate nohighlight">\(x\)</span> aus <span
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Ableitungen.html"
+       href="Tangente.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Ableitungen</p>
+        <p class="prev-next-title">Tangente und allgemeine Tangentengleichung</p>
       </div>
     </a>
     <a class="right-next"
@@ -507,7 +514,7 @@ Wenn für alle <span class="math notranslate nohighlight">\(x\)</span> aus <span
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book community
+By Frederic Baumeister
 </p>
 
   </div>
@@ -517,7 +524,7 @@ By The Jupyter Book community
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>

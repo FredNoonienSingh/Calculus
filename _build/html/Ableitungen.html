@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Ableitungen &#8212; My Jupyter Book</title>
+    <title>Ableitungen &#8212; Mathematik</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -65,7 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Ableitungen';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Monotonie und Krümmung" href="monotonie.html" />
+    <link rel="next" title="Tangente und allgemeine Tangentengleichung" href="Tangente.html" />
     <link rel="prev" title="Einführung" href="Einf%C3%BChrung.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -143,8 +143,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Mathematik - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Mathematik - Home"/>
   
-    <p class="title logo__title">My Jupyter Book</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -167,12 +173,13 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Calculus 101</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Ableitungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tangente.html">Tangente und allgemeine Tangentengleichung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monotonie.html">Monotonie und Krümmung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ExtremUndWendepunkte.html">Extrem und Wendepunkte</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Jupyter, Markdown, Python &amp; LaTeX</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="jupyter.html">WTF is JUPYTER ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Was sind Jupyter Notebooks?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown_guide.html">Markdown Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="latex_guide.html">Latex Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_for_math.html">Basic Python für Mathematik</a></li>
@@ -316,12 +323,15 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konstantenregel">Konstantenregel:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faktorregel">Faktorregel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potenzregel">Potenzregel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summenregel">Summenregel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#produkte">Produkte</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quotientenregel">Quotientenregel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ableitungsregeln">Ableitungsregeln</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konstantenregel">Konstantenregel:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#faktorregel">Faktorregel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potenzregel">Potenzregel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summenregel">Summenregel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produkte">Produkte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quotientenregel">Quotientenregel</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -337,86 +347,30 @@
 <h1>Ableitungen<a class="headerlink" href="#ableitungen" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Maths </span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Display</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">style</span> 
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span> <span class="k">as</span> <span class="n">md</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span>
+
+<span class="c1"># custom utils</span>
+<span class="kn">from</span> <span class="nn">utils.cartessean_plot</span> <span class="kn">import</span> <span class="n">cartesean_plot</span>
+
+<span class="c1"># configs </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.autolayout&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 </div>
-<section id="konstantenregel">
-<h2>Konstantenregel:<a class="headerlink" href="#konstantenregel" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\Large{
-\begin{align*} 
-&amp;f(x)=1\\
-&amp;f'(x)=0 \\
-\end{align*}
-}
-\end{split}\]</div>
-</section>
-<section id="faktorregel">
-<h2>Faktorregel<a class="headerlink" href="#faktorregel" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\Large{
-\begin{align*} 
-&amp;y = C \cdot f(x)\\
-&amp;y' = C \cdot f'(x) \\
-\end{align*}
-}
-\end{split}\]</div>
-</section>
-<section id="potenzregel">
-<h2>Potenzregel<a class="headerlink" href="#potenzregel" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\Large{
-\begin{align*} 
-&amp;f(x) = x^n \\
-&amp;f'(x) = n \cdot x^{n-1}\\
-\end{align*}
-}
-\end{split}\]</div>
-</section>
-<section id="summenregel">
-<h2>Summenregel<a class="headerlink" href="#summenregel" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\Large{
-\begin{align*} 
-&amp;f(x) = f_1(x) + f_2(x)\\
-&amp;f'(x) = f'_1(x). + f'_2(x)\\
-\end{align*}
-}
-\end{split}\]</div>
-</section>
-<section id="produkte">
-<h2>Produkte<a class="headerlink" href="#produkte" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\Large{
-\begin{align*} 
-&amp;y = u \cdot v \\
-&amp;y' = u' \cdot v + v' \cdot u
-\end{align*}
-}
-\end{split}\]</div>
-</section>
-<section id="quotientenregel">
-<h2>Quotientenregel<a class="headerlink" href="#quotientenregel" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\Large{
-\begin{align*} 
-&amp;f(x) = u:v \\
-&amp;f'(x) = \frac{u'\cdot v - u \cdot v'}{v^2}
-\end{align*}
-}
-\end{split}\]</div>
+<p>Bei einer Ableitung handelt es sich um eine Funktion, die die Steigung einer Funktion angibt.</p>
+<p>Ist die Funktion <span class="math notranslate nohighlight">\(f(x)\)</span> geben so nennen wir die Ableitung <span class="math notranslate nohighlight">\(f'(x)\)</span> oder <span class="math notranslate nohighlight">\(\frac{d}{dx}f(x)\)</span> (Leibnitz Notation).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_function_value</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -440,9 +394,83 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/b5a4c18e8c0bc911362b89bd2416172b6d72074767068c49bbd9a84b94c2b73d.png" src="_images/b5a4c18e8c0bc911362b89bd2416172b6d72074767068c49bbd9a84b94c2b73d.png" />
+<img alt="_images/c97988ece30c4c3b08806fbdb4c62189db558ca60eb8f0b1e1d8a18ac34ef7fd.png" src="_images/c97988ece30c4c3b08806fbdb4c62189db558ca60eb8f0b1e1d8a18ac34ef7fd.png" />
 </div>
 </div>
+<section id="ableitungsregeln">
+<h2>Ableitungsregeln<a class="headerlink" href="#ableitungsregeln" title="Link to this heading">#</a></h2>
+<section id="konstantenregel">
+<h3>Konstantenregel:<a class="headerlink" href="#konstantenregel" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Large{
+\begin{align*} 
+&amp;f(x)=1\\
+&amp;f'(x)=0 \\
+\end{align*}
+}
+\end{split}\]</div>
+</section>
+<section id="faktorregel">
+<h3>Faktorregel<a class="headerlink" href="#faktorregel" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Large{
+\begin{align*} 
+&amp;y = C \cdot f(x)\\
+&amp;y' = C \cdot f'(x) \\
+\end{align*}
+}
+\end{split}\]</div>
+</section>
+<section id="potenzregel">
+<h3>Potenzregel<a class="headerlink" href="#potenzregel" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Large{
+\begin{align*} 
+&amp;f(x) = x^n \\
+&amp;f'(x) = n \cdot x^{n-1}\\
+\end{align*}
+}
+\end{split}\]</div>
+</section>
+<section id="summenregel">
+<h3>Summenregel<a class="headerlink" href="#summenregel" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Large{
+\begin{align*} 
+&amp;f(x) = f_1(x) + f_2(x)\\
+&amp;f'(x) = f'_1(x). + f'_2(x)\\
+\end{align*}
+}
+\end{split}\]</div>
+</section>
+<section id="produkte">
+<h3>Produkte<a class="headerlink" href="#produkte" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Large{
+\begin{align*} 
+&amp;y = u \cdot v \\
+&amp;y' = u' \cdot v + v' \cdot u
+\end{align*}
+}
+\end{split}\]</div>
+</section>
+<section id="quotientenregel">
+<h3>Quotientenregel<a class="headerlink" href="#quotientenregel" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Large{
+\begin{align*} 
+&amp;f(x) = u:v \\
+&amp;f'(x) = \frac{u'\cdot v - u \cdot v'}{v^2}
+\end{align*}
+}
+\end{split}\]</div>
+</section>
 </section>
 </section>
 
@@ -486,11 +514,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="monotonie.html"
+       href="Tangente.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Monotonie und Krümmung</p>
+        <p class="prev-next-title">Tangente und allgemeine Tangentengleichung</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -511,12 +539,15 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konstantenregel">Konstantenregel:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faktorregel">Faktorregel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potenzregel">Potenzregel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summenregel">Summenregel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#produkte">Produkte</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quotientenregel">Quotientenregel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ableitungsregeln">Ableitungsregeln</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konstantenregel">Konstantenregel:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#faktorregel">Faktorregel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potenzregel">Potenzregel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summenregel">Summenregel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produkte">Produkte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quotientenregel">Quotientenregel</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -531,7 +562,7 @@
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book community
+By Frederic Baumeister
 </p>
 
   </div>
@@ -541,7 +572,7 @@ By The Jupyter Book community
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>
