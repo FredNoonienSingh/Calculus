@@ -1,0 +1,15 @@
+format: jb-book
+root: Einführung
+
+parts:
+  - caption: Calculus 101
+    chapters:
+      - file: Ableitungen
+      - file: monotonie
+      - file: ExtremUndWendepunkte
+  - caption: Jupyter, Markdown, Python & LaTeX
+    chapters:
+      - file: jupyter
+      - file: markdown_guide
+      - file: latex_guide
+      - file: python_for_math
